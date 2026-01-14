@@ -2,3 +2,31 @@ venv/
 __pycache__/
 *.pyc
 .env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Environment variables
+.env
+.env.local
+
+# Flask
+instance/
+.webassets-cache
+
+# Database
+*.db
+*.sqlite
+urls.json
