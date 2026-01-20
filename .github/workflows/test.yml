@@ -1,15 +1,15 @@
 name: Build docker image and push to dockerhub
-run name: Build and upload docker image by @${github.actor}
+run-name: Build and upload docker image by @${{ github.actor }}
 
 on:
   push:
     branches:
       - main
-      - develop
+
   pull_request:
     branches:
       - main
-      - develop
+
 
 jobs:
   deploy:
