@@ -32,7 +32,9 @@ def your_url():
         else:
             f = request.files['file']
             full_name = request.form['code'] + secure_filename(f.filename)
-            f.save('/Users/nickwalter/Desktop/url-shortener/static/user_files/' + full_name)
+            UPLOAD_FOLDER = os.path.join(app.root_path, "static", "user_files")
+            os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+            f.save(os.path.join(UPLOAD_FOLDER, full_name))
             urls[request.form['code']] = {'file':full_name}
 
 
