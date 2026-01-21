@@ -1,0 +1,11 @@
+name: Deployment
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  Build_and_Push_to_DockerHub:
+    uses: ./.github/workflows/build_and_push_to_dockerhub.yml
+    secrets: inherit
