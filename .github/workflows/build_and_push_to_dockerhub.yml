@@ -6,7 +6,7 @@ on:
 
 
 jobs:
-  deploy:
+  Container_Image_Build_and_Push:
     runs-on: ubuntu-latest
 
     steps:
